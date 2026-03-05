@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    overflow-x: hidden;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 0;
+    z-index: 1000;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+nav ul li {
+    margin: 0 25px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: 0.3s;
+}
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #00f5d4;
+    transition: 0.3s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 150px;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+.section h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    background: linear-gradient(to right, #00f5d4, #00bbf9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+}
+.section::before,
+.section::after {
+    content:"";
+    position:absolute;
+    top:0;
+    width:120px;
+    height:100%;
+    z-index:0;
+    background:repeating-linear-gradient(to bottom, transparent, transparent 20px, rgba(0,245,212,0.3) 20px, rgba(0,245,212,0.3) 21px);
+}
+.section::before{ left:0; }
+.section::after{ right:0; }
+.tech-icon {
+    position:absolute;
+    color:#00f5d4;
+    font-size:30px;
+    opacity:0.5;
+    animation: floatTech 5s linear infinite;
+}
+@keyframes floatTech {
+    0%{transform:translateY(0) rotate(0deg);}
+    50%{transform:translateY(20px) rotate(15deg);}
+    100%{transform:translateY(0) rotate(0deg);}
+}
+.contact-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+.side-image {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 245, 212, 0.3);
+    object-fit: cover;
+}
+.contact-text {
+    max-width: 400px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,245,212,0.3);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<ul>
+<li><a href="HOME.html">Home</a></li>
+<li><a href="PROJECT.html">My Projects</a></li>
+<li><a href="ABOUTME.html">About Me</a></li>
+<li><a href="CONTACT.html">Contacts</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="section">
+<h1>Contact Me</h1>
+
+<div class="contact-wrapper">
+<img src="insta.jpg" class="side-image">
+<div class="contact-text">
+<p>Hello! I’d love to hear from you. You can reach me via:</p>
+<p><strong>Email: gerarcasrealino2005@gmail.com</strong></p>
+<p>Phone: <strong>09300618685</strong></p>
+<p>or contact me on social media!</p>
+</div>
+<img src="fb.jpg" class="side-image">
+</div>
+
+<i class="tech-icon fa-solid fa-envelope" style="top:10%; left:20%; animation-duration:3s;"></i>
+<i class="tech-icon fa-solid fa-mobile-screen" style="top:30%; left:80%; animation-duration:3s;"></i>
+<i class="tech-icon fa-solid fa-paper-plane" style="top:50%; left:50%; animation-duration:3s;"></i>
+<i class="tech-icon fa-solid fa-message" style="top:70%; left:30%; animation-duration:3s;"></i>
+
+</section>
+</body>
+</html>
