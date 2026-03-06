@@ -145,17 +145,27 @@ nav ul li a:hover::after {
 <h1>Contact Me</h1>
 
 <div class="contact-wrapper">
-<img src="insta.jpg" class="side-image">
-<div class="contact-text">
-<p>Hello! I’d love to hear from you. You can reach me via:</p>
-<p><strong>Email: gerarcasrealino2005@gmail.com</strong></p>
-<p>Phone: <strong>09300618685</strong></p>
-<p>or contact me on social media!</p>
-</div>
-<img src="fb.jpg" class="side-image">
-</div>
+    <img src="insta.jpg" class="side-image">
+    <div class="contact-text">
+        <p>Hello! I’d love to hear from you. Fill out the form below to send me a message:</p>
 
-<i class="tech-icon fa-solid fa-envelope" style="top:10%; left:20%; animation-duration:3s;"></i>
+        <!-- Contact Form -->
+        <form action="mailto:gerarcasrealino@gmail.com" method="GET" enctype="text/plain" style="display:flex; flex-direction:column; gap:10px;">
+            <input type="text" name="name" placeholder="Your Name" required 
+                   style="padding:10px; border-radius:8px; border:none; outline:none; font-size:1rem;">
+            <input type="email" name="email" placeholder="Your Email" required
+                   style="padding:10px; border-radius:8px; border:none; outline:none; font-size:1rem;">
+            <textarea name="message" placeholder="Your Message" rows="5" required
+                      style="padding:10px; border-radius:8px; border:none; outline:none; font-size:1rem; resize:none;"></textarea>
+            <button type="submit" 
+                    style="padding:10px 20px; background:#00f5d4; color:#000; border-radius:8px; border:none; font-weight:bold; cursor:pointer; transition:0.3s;">
+                Send Message
+            </button>
+        </form>
+
+    </div>
+    <img src="fb.jpg" class="side-image">
+</div><i class="tech-icon fa-solid fa-envelope" style="top:10%; left:20%; animation-duration:3s;"></i>
 <i class="tech-icon fa-solid fa-mobile-screen" style="top:30%; left:80%; animation-duration:3s;"></i>
 <i class="tech-icon fa-solid fa-paper-plane" style="top:50%; left:50%; animation-duration:3s;"></i>
 <i class="tech-icon fa-solid fa-message" style="top:70%; left:30%; animation-duration:3s;"></i>
